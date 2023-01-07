@@ -16,6 +16,7 @@
 		B161B9EA296A318200F6B5EF /* FastFeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9E9296A318200F6B5EF /* FastFeetTests.swift */; };
 		B161B9F4296A318200F6B5EF /* FastFeetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9F3296A318200F6B5EF /* FastFeetUITests.swift */; };
 		B161B9F6296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9F5296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift */; };
+		B161BA05296A34C100F6B5EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161BA04296A34C100F6B5EF /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B161B9EF296A318200F6B5EF /* FastFeetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastFeetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B161B9F3296A318200F6B5EF /* FastFeetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFeetUITests.swift; sourceTree = "<group>"; };
 		B161B9F5296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFeetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B161BA04296A34C100F6B5EF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				B161B9DD296A318200F6B5EF /* LaunchScreen.storyboard */,
 				B161B9CF296A318200F6B5EF /* AppDelegate.swift */,
 				B161B9D1296A318200F6B5EF /* SceneDelegate.swift */,
+				B161BA04296A34C100F6B5EF /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B161BA05296A34C100F6B5EF /* Extensions.swift in Sources */,
 				B161B9D4296A318200F6B5EF /* ViewController.swift in Sources */,
 				B161B9D0296A318200F6B5EF /* AppDelegate.swift in Sources */,
 				B161B9D2296A318200F6B5EF /* SceneDelegate.swift in Sources */,
