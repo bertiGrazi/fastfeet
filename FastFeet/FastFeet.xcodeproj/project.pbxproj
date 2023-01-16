@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B161B9D0296A318200F6B5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9CF296A318200F6B5EF /* AppDelegate.swift */; };
 		B161B9D2296A318200F6B5EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9D1296A318200F6B5EF /* SceneDelegate.swift */; };
-		B161B9D4296A318200F6B5EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9D3296A318200F6B5EF /* ViewController.swift */; };
+		B161B9D4296A318200F6B5EF /* FFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9D3296A318200F6B5EF /* FFLoginViewController.swift */; };
 		B161B9DA296A318200F6B5EF /* FastFeet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B161B9D8296A318200F6B5EF /* FastFeet.xcdatamodeld */; };
 		B161B9DC296A318200F6B5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B161B9DB296A318200F6B5EF /* Assets.xcassets */; };
 		B161B9DF296A318200F6B5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B161B9DD296A318200F6B5EF /* LaunchScreen.storyboard */; };
@@ -17,6 +17,8 @@
 		B161B9F4296A318200F6B5EF /* FastFeetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9F3296A318200F6B5EF /* FastFeetUITests.swift */; };
 		B161B9F6296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9F5296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift */; };
 		B161BA05296A34C100F6B5EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161BA04296A34C100F6B5EF /* Extensions.swift */; };
+		B1FC7E122975B6D500017D98 /* FFHeaderStartMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7E112975B6D500017D98 /* FFHeaderStartMainView.swift */; };
+		B1FC7E152975CD4000017D98 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7E142975CD4000017D98 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,7 @@
 		B161B9CC296A318200F6B5EF /* FastFeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastFeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B161B9CF296A318200F6B5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B161B9D1296A318200F6B5EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B161B9D3296A318200F6B5EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B161B9D3296A318200F6B5EF /* FFLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFLoginViewController.swift; sourceTree = "<group>"; };
 		B161B9D9296A318200F6B5EF /* FastFeet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FastFeet.xcdatamodel; sourceTree = "<group>"; };
 		B161B9DB296A318200F6B5EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B161B9DE296A318200F6B5EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		B161B9F3296A318200F6B5EF /* FastFeetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFeetUITests.swift; sourceTree = "<group>"; };
 		B161B9F5296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFeetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B161BA04296A34C100F6B5EF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B1FC7E112975B6D500017D98 /* FFHeaderStartMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFHeaderStartMainView.swift; sourceTree = "<group>"; };
+		B1FC7E142975CD4000017D98 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 				B161BA03296A31BC00F6B5EF /* Controller */,
 				B161B9E0296A318200F6B5EF /* Info.plist */,
 				B161B9D8296A318200F6B5EF /* FastFeet.xcdatamodeld */,
+				B1FC7E132975B91300017D98 /* View */,
 			);
 			path = FastFeet;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 				B161B9CF296A318200F6B5EF /* AppDelegate.swift */,
 				B161B9D1296A318200F6B5EF /* SceneDelegate.swift */,
 				B161BA04296A34C100F6B5EF /* Extensions.swift */,
+				B1FC7E142975CD4000017D98 /* Utilities.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -141,9 +147,17 @@
 		B161BA03296A31BC00F6B5EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B161B9D3296A318200F6B5EF /* ViewController.swift */,
+				B161B9D3296A318200F6B5EF /* FFLoginViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B1FC7E132975B91300017D98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1FC7E112975B6D500017D98 /* FFHeaderStartMainView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B161BA05296A34C100F6B5EF /* Extensions.swift in Sources */,
-				B161B9D4296A318200F6B5EF /* ViewController.swift in Sources */,
+				B1FC7E122975B6D500017D98 /* FFHeaderStartMainView.swift in Sources */,
+				B1FC7E152975CD4000017D98 /* Utilities.swift in Sources */,
+				B161B9D4296A318200F6B5EF /* FFLoginViewController.swift in Sources */,
 				B161B9D0296A318200F6B5EF /* AppDelegate.swift in Sources */,
 				B161B9D2296A318200F6B5EF /* SceneDelegate.swift in Sources */,
 				B161B9DA296A318200F6B5EF /* FastFeet.xcdatamodeld in Sources */,
