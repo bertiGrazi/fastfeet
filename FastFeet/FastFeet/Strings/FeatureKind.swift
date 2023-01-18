@@ -10,4 +10,5 @@ import Foundation
 enum FeatureKind {
     case loginPresentation
     case forgotPasswordPresentation
+    case mainTabPresentation
 }

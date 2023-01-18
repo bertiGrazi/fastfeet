@@ -148,7 +148,8 @@ class FFLoginViewController: UIViewController {
     
     @objc
     func goToMainScreen() {
-        print(#function)
+        let mainTabVC = FFMainTabViewController()
+        navigationController?.pushViewController(mainTabVC, animated: true)
     }
 }
 

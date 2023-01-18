@@ -21,6 +21,10 @@
 		B1CF28DB2978491100D0A562 /* FFLoginStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28DA2978491100D0A562 /* FFLoginStrings.swift */; };
 		B1CF28DD2978499600D0A562 /* FeatureKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28DC2978499600D0A562 /* FeatureKind.swift */; };
 		B1CF28DF29784BDF00D0A562 /* FFForgotPasswordStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28DE29784BDF00D0A562 /* FFForgotPasswordStrings.swift */; };
+		B1CF28E429785C8500D0A562 /* FFMainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28E329785C8500D0A562 /* FFMainTabViewController.swift */; };
+		B1CF28E629785D6200D0A562 /* FFPendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28E529785D6200D0A562 /* FFPendingViewController.swift */; };
+		B1CF28E929785DC700D0A562 /* FFDeliveredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28E829785DC700D0A562 /* FFDeliveredViewController.swift */; };
+		B1CF28EB297860BC00D0A562 /* FFMainTabStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28EA297860BC00D0A562 /* FFMainTabStrings.swift */; };
 		B1FC7E122975B6D500017D98 /* FFHeaderStartMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7E112975B6D500017D98 /* FFHeaderStartMainView.swift */; };
 		B1FC7E152975CD4000017D98 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7E142975CD4000017D98 /* Utilities.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +65,10 @@
 		B1CF28DA2978491100D0A562 /* FFLoginStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFLoginStrings.swift; sourceTree = "<group>"; };
 		B1CF28DC2978499600D0A562 /* FeatureKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureKind.swift; sourceTree = "<group>"; };
 		B1CF28DE29784BDF00D0A562 /* FFForgotPasswordStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFForgotPasswordStrings.swift; sourceTree = "<group>"; };
+		B1CF28E329785C8500D0A562 /* FFMainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFMainTabViewController.swift; sourceTree = "<group>"; };
+		B1CF28E529785D6200D0A562 /* FFPendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPendingViewController.swift; sourceTree = "<group>"; };
+		B1CF28E829785DC700D0A562 /* FFDeliveredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFDeliveredViewController.swift; sourceTree = "<group>"; };
+		B1CF28EA297860BC00D0A562 /* FFMainTabStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFMainTabStrings.swift; sourceTree = "<group>"; };
 		B1FC7E112975B6D500017D98 /* FFHeaderStartMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFHeaderStartMainView.swift; sourceTree = "<group>"; };
 		B1FC7E142975CD4000017D98 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,8 +164,8 @@
 		B161BA03296A31BC00F6B5EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B161B9D3296A318200F6B5EF /* FFLoginViewController.swift */,
-				B1CF28D5297829DF00D0A562 /* FFForgotPassword.swift */,
+				B1CF28E229785C6300D0A562 /* Core */,
+				B1CF28E129785C4200D0A562 /* Authentication */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,8 +184,36 @@
 			children = (
 				B1CF28DA2978491100D0A562 /* FFLoginStrings.swift */,
 				B1CF28DE29784BDF00D0A562 /* FFForgotPasswordStrings.swift */,
+				B1CF28EA297860BC00D0A562 /* FFMainTabStrings.swift */,
 			);
 			path = "Presentations Strings";
+			sourceTree = "<group>";
+		};
+		B1CF28E129785C4200D0A562 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				B161B9D3296A318200F6B5EF /* FFLoginViewController.swift */,
+				B1CF28D5297829DF00D0A562 /* FFForgotPassword.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		B1CF28E229785C6300D0A562 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B1CF28E329785C8500D0A562 /* FFMainTabViewController.swift */,
+				B1CF28E729785D9600D0A562 /* Screens */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B1CF28E729785D9600D0A562 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B1CF28E529785D6200D0A562 /* FFPendingViewController.swift */,
+				B1CF28E829785DC700D0A562 /* FFDeliveredViewController.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		B1FC7E132975B91300017D98 /* View */ = {
@@ -320,13 +356,17 @@
 			files = (
 				B1CF28DB2978491100D0A562 /* FFLoginStrings.swift in Sources */,
 				B161BA05296A34C100F6B5EF /* Extensions.swift in Sources */,
+				B1CF28E429785C8500D0A562 /* FFMainTabViewController.swift in Sources */,
 				B1CF28D6297829DF00D0A562 /* FFForgotPassword.swift in Sources */,
 				B1FC7E122975B6D500017D98 /* FFHeaderStartMainView.swift in Sources */,
 				B1CF28DD2978499600D0A562 /* FeatureKind.swift in Sources */,
+				B1CF28EB297860BC00D0A562 /* FFMainTabStrings.swift in Sources */,
 				B1CF28DF29784BDF00D0A562 /* FFForgotPasswordStrings.swift in Sources */,
+				B1CF28E629785D6200D0A562 /* FFPendingViewController.swift in Sources */,
 				B1FC7E152975CD4000017D98 /* Utilities.swift in Sources */,
 				B161B9D4296A318200F6B5EF /* FFLoginViewController.swift in Sources */,
 				B161B9D0296A318200F6B5EF /* AppDelegate.swift in Sources */,
+				B1CF28E929785DC700D0A562 /* FFDeliveredViewController.swift in Sources */,
 				B161B9D2296A318200F6B5EF /* SceneDelegate.swift in Sources */,
 				B161B9DA296A318200F6B5EF /* FastFeet.xcdatamodeld in Sources */,
 			);
