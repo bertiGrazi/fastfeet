@@ -52,8 +52,14 @@ class FFLoginViewController: UIViewController {
     
     fileprivate let forgotPasswordButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Esqueci minha senha", for: .normal)
-        button.setTitleColor(UIColor.backgroundLightColor, for: .normal)
+        button.setAttributedTitle(NSAttributedString(
+            string: "Esqueci minha senha",
+            attributes: [
+                NSAttributedString.Key.foregroundColor: UIColor.subtitleTextFastFeetColor,
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14),
+                NSAttributedString.Key.underlineStyle: 1
+            ]),
+            for: .normal)
         button.backgroundColor = UIColor.backgroundColor
         button.addTarget(nil, action: #selector(goToForgotMyPasswordView), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -121,7 +127,7 @@ class FFLoginViewController: UIViewController {
             passwordTextField.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
             passwordTextField.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width <= 375 ? 46: 56),
             
-            forgotPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 8),
+            forgotPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 14),
             forgotPasswordButton.trailingAnchor.constraint(equalTo: inputsContainerView.trailingAnchor, constant: -24),
             forgotPasswordButton.heightAnchor.constraint(equalToConstant: 25),
             
@@ -134,7 +140,9 @@ class FFLoginViewController: UIViewController {
     
     @objc
     func goToForgotMyPasswordView() {
-        print(#function)
+        let forgotPasswordVC = FFForgotPassword()
+        navigationController?.pushViewController(forgotPasswordVC, animated: true)
+        forgotPasswordVC.navigationItem.largeTitleDisplayMode = .never
     }
     
     @objc
