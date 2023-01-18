@@ -25,6 +25,7 @@
 		B1CF28E629785D6200D0A562 /* FFPendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28E529785D6200D0A562 /* FFPendingViewController.swift */; };
 		B1CF28E929785DC700D0A562 /* FFDeliveredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28E829785DC700D0A562 /* FFDeliveredViewController.swift */; };
 		B1CF28EB297860BC00D0A562 /* FFMainTabStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28EA297860BC00D0A562 /* FFMainTabStrings.swift */; };
+		B1CF28ED2978730400D0A562 /* FFHeaderMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28EC2978730400D0A562 /* FFHeaderMainTabView.swift */; };
 		B1FC7E122975B6D500017D98 /* FFHeaderStartMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7E112975B6D500017D98 /* FFHeaderStartMainView.swift */; };
 		B1FC7E152975CD4000017D98 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7E142975CD4000017D98 /* Utilities.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		B1CF28E529785D6200D0A562 /* FFPendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPendingViewController.swift; sourceTree = "<group>"; };
 		B1CF28E829785DC700D0A562 /* FFDeliveredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFDeliveredViewController.swift; sourceTree = "<group>"; };
 		B1CF28EA297860BC00D0A562 /* FFMainTabStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFMainTabStrings.swift; sourceTree = "<group>"; };
+		B1CF28EC2978730400D0A562 /* FFHeaderMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFHeaderMainTabView.swift; sourceTree = "<group>"; };
 		B1FC7E112975B6D500017D98 /* FFHeaderStartMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFHeaderStartMainView.swift; sourceTree = "<group>"; };
 		B1FC7E142975CD4000017D98 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +128,7 @@
 				B161BA03296A31BC00F6B5EF /* Controller */,
 				B161B9E0296A318200F6B5EF /* Info.plist */,
 				B161B9D8296A318200F6B5EF /* FastFeet.xcdatamodeld */,
-				B1FC7E132975B91300017D98 /* View */,
+				B1FC7E132975B91300017D98 /* Custom View */,
 			);
 			path = FastFeet;
 			sourceTree = "<group>";
@@ -216,12 +218,13 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		B1FC7E132975B91300017D98 /* View */ = {
+		B1FC7E132975B91300017D98 /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
 				B1FC7E112975B6D500017D98 /* FFHeaderStartMainView.swift */,
+				B1CF28EC2978730400D0A562 /* FFHeaderMainTabView.swift */,
 			);
-			path = View;
+			path = "Custom View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1CF28ED2978730400D0A562 /* FFHeaderMainTabView.swift in Sources */,
 				B1CF28DB2978491100D0A562 /* FFLoginStrings.swift in Sources */,
 				B161BA05296A34C100F6B5EF /* Extensions.swift in Sources */,
 				B1CF28E429785C8500D0A562 /* FFMainTabViewController.swift in Sources */,

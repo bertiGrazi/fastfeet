@@ -10,8 +10,9 @@ import UIKit
 class FFMainTabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .backgroundLightColor
+        view.backgroundColor = .backgroundColor
         setUpTabs()
+        setupTabBarAppearance()
     }
     
     private func setUpTabs() {
@@ -19,7 +20,11 @@ class FFMainTabViewController: UITabBarController {
         let deliveredVC = FFDeliveredViewController()
         
         pendingVC.navigationItem.largeTitleDisplayMode = .always
+        pendingVC.navigationItem.titleView = FFHeaderMainTabView()
+        
         deliveredVC.navigationItem.largeTitleDisplayMode = .always
+        deliveredVC.navigationItem.titleView = FFHeaderMainTabView()
+        
         
         let nav1 = UINavigationController(rootViewController: pendingVC)
         let nav2 = UINavigationController(rootViewController: deliveredVC)
@@ -35,6 +40,18 @@ class FFMainTabViewController: UITabBarController {
             tag: 1
         )
         
+        for nav in [nav1, nav2] {
+            nav.navigationBar.prefersLargeTitles = true
+            nav.navigationBar.backgroundColor = .backgroundColor
+            nav.navigationBar.isTranslucent = false
+        }
+        
+        setViewControllers([ nav1, nav2 ], animated: true)
+    }
+    
+    fileprivate func setupTabBarAppearance() {
+        UITabBar.appearance().backgroundColor = .backgroundLightColor
+        
         let tabBarAppearance = UITabBarAppearance()
         let tabBarItemAppearance = UITabBarItemAppearance()
 
@@ -48,10 +65,6 @@ class FFMainTabViewController: UITabBarController {
 
         tabBar.standardAppearance = tabBarAppearance
         
-        for nav in [nav1, nav2] {
-            nav.navigationBar.prefersLargeTitles = true
-        }
-        
-        setViewControllers([ nav1, nav2 ], animated: true)
+        UITabBar.appearance().backgroundColor = .whiteFastFeetColor
     }
 }
