@@ -38,6 +38,9 @@ extension String {
             fileName = "FFLoginStrings"
         case .forgotPasswordPresentation:
             fileName = "FFForgotPasswordStrings"
+            
+        case .mainTabPresentation:
+            fileName = "FFMainTabStrings"
         }
         
         return NSLocalizedString(self, tableName: fileName, bundle: Bundle.main, value: String(), comment: String())
