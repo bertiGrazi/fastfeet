@@ -26,9 +26,9 @@ class FFLoginViewController: UIViewController {
     }()
     
     fileprivate let headerMainView = FFHeaderStartMainView(
-        firtsTitle: "Entregador,\n",
-        secondTitle: "você é nosso\nmaior valor",
-        descriptionText: "Faça seu login para\ncomeçar suas entregas"
+        firtsTitle: FFLoginStrings.loginHeaderfirtsTitle.localized(),
+        secondTitle: FFLoginStrings.loginHeadersecondTitle.localized(),
+        descriptionText: FFLoginStrings.loginHeaderdescriptionText.localized()
     )
     
     fileprivate let inputsContainerView: UIView = {
@@ -39,13 +39,13 @@ class FFLoginViewController: UIViewController {
     }()
     
     fileprivate let cpfTextField: UITextField = {
-        let textField = Utilities().textField(withPlaceholder: " CPF")
+        let textField = Utilities().textField(withPlaceholder: FFLoginStrings.loginPlaceholderCPF.localized())
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
     fileprivate let passwordTextField: UITextField = {
-        let textField = Utilities().textField(withPlaceholder: " Senha")
+        let textField = Utilities().textField(withPlaceholder: FFLoginStrings.loginPlaceholderPassword.localized())
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -53,7 +53,7 @@ class FFLoginViewController: UIViewController {
     fileprivate let forgotPasswordButton: UIButton = {
         let button = UIButton()
         button.setAttributedTitle(NSAttributedString(
-            string: "Esqueci minha senha",
+            string: FFLoginStrings.loginforgotPasswordTextButton.localized(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor.subtitleTextFastFeetColor,
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14),
@@ -68,7 +68,7 @@ class FFLoginViewController: UIViewController {
     
     fileprivate let signInButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Entrar", for: .normal)
+        button.setTitle(FFLoginStrings.loginSignInTextButton.localized(), for: .normal)
         button.setTitleColor(UIColor.baseTextFastFeetColor, for: .normal)
         button.backgroundColor = UIColor.yellowFastFeetColor
         button.layer.cornerRadius = 8
