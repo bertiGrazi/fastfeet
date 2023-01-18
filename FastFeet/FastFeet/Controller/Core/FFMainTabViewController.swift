@@ -20,7 +20,10 @@ class FFMainTabViewController: UITabBarController {
         let deliveredVC = FFDeliveredViewController()
         
         pendingVC.navigationItem.largeTitleDisplayMode = .always
+        pendingVC.navigationItem.titleView = FFHeaderMainTabView()
+        
         deliveredVC.navigationItem.largeTitleDisplayMode = .always
+        deliveredVC.navigationItem.titleView = FFHeaderMainTabView()
         
         
         let nav1 = UINavigationController(rootViewController: pendingVC)
