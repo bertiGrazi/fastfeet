@@ -10,7 +10,7 @@ import UIKit
 class FFMainTabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .backgroundColor
         setUpTabs()
         setupTabBarAppearance()
     }
@@ -40,12 +40,15 @@ class FFMainTabViewController: UITabBarController {
         for nav in [nav1, nav2] {
             nav.navigationBar.prefersLargeTitles = true
             nav.navigationBar.backgroundColor = .backgroundColor
+            nav.navigationBar.isTranslucent = false
         }
         
         setViewControllers([ nav1, nav2 ], animated: true)
     }
     
     fileprivate func setupTabBarAppearance() {
+        UITabBar.appearance().backgroundColor = .backgroundLightColor
+        
         let tabBarAppearance = UITabBarAppearance()
         let tabBarItemAppearance = UITabBarItemAppearance()
 
@@ -59,6 +62,6 @@ class FFMainTabViewController: UITabBarController {
 
         tabBar.standardAppearance = tabBarAppearance
         
-        UITabBar.appearance().backgroundColor = .backgroundLightColor
+        UITabBar.appearance().backgroundColor = .whiteFastFeetColor
     }
 }
