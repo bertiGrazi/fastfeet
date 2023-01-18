@@ -12,6 +12,7 @@ class FFMainTabViewController: UITabBarController {
         super.viewDidLoad()
         view.backgroundColor = .backgroundLightColor
         setUpTabs()
+        setupLayoutTab()
     }
     
     private func setUpTabs() {
@@ -35,6 +36,14 @@ class FFMainTabViewController: UITabBarController {
             tag: 1
         )
         
+        for nav in [nav1, nav2] {
+            nav.navigationBar.prefersLargeTitles = true
+        }
+        
+        setViewControllers([ nav1, nav2 ], animated: true)
+    }
+    
+    fileprivate func setupLayoutTab() {
         let tabBarAppearance = UITabBarAppearance()
         let tabBarItemAppearance = UITabBarItemAppearance()
 
@@ -47,11 +56,5 @@ class FFMainTabViewController: UITabBarController {
         tabBarAppearance.stackedLayoutAppearance = tabBarItemAppearance
 
         tabBar.standardAppearance = tabBarAppearance
-        
-        for nav in [nav1, nav2] {
-            nav.navigationBar.prefersLargeTitles = true
-        }
-        
-        setViewControllers([ nav1, nav2 ], animated: true)
     }
 }
