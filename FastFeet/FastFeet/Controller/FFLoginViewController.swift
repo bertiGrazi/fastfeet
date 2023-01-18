@@ -143,6 +143,7 @@ class FFLoginViewController: UIViewController {
         let forgotPasswordVC = FFForgotPassword()
         navigationController?.pushViewController(forgotPasswordVC, animated: true)
         forgotPasswordVC.navigationItem.largeTitleDisplayMode = .never
+        forgotPasswordVC.navigationController?.navigationBar.tintColor = .whiteFastFeetColor
     }
     
     @objc
