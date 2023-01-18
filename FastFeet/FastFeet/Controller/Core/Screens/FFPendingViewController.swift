@@ -11,6 +11,7 @@ class FFPendingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .backgroundLightColor
+        view.backgroundColor = .backgroundColor
+        title = "Pendentes"
     }
 }

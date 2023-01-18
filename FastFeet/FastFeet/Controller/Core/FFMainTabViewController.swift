@@ -10,9 +10,9 @@ import UIKit
 class FFMainTabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .backgroundLightColor
+        view.backgroundColor = .white
         setUpTabs()
-        setupLayoutTab()
+        setupTabBarAppearance()
     }
     
     private func setUpTabs() {
@@ -21,6 +21,7 @@ class FFMainTabViewController: UITabBarController {
         
         pendingVC.navigationItem.largeTitleDisplayMode = .always
         deliveredVC.navigationItem.largeTitleDisplayMode = .always
+        
         
         let nav1 = UINavigationController(rootViewController: pendingVC)
         let nav2 = UINavigationController(rootViewController: deliveredVC)
@@ -38,12 +39,13 @@ class FFMainTabViewController: UITabBarController {
         
         for nav in [nav1, nav2] {
             nav.navigationBar.prefersLargeTitles = true
+            nav.navigationBar.backgroundColor = .backgroundColor
         }
         
         setViewControllers([ nav1, nav2 ], animated: true)
     }
     
-    fileprivate func setupLayoutTab() {
+    fileprivate func setupTabBarAppearance() {
         let tabBarAppearance = UITabBarAppearance()
         let tabBarItemAppearance = UITabBarItemAppearance()
 
@@ -56,5 +58,7 @@ class FFMainTabViewController: UITabBarController {
         tabBarAppearance.stackedLayoutAppearance = tabBarItemAppearance
 
         tabBar.standardAppearance = tabBarAppearance
+        
+        UITabBar.appearance().backgroundColor = .backgroundLightColor
     }
 }
