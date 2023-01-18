@@ -34,9 +34,9 @@ class FFForgotPassword: UIViewController {
     }()
     
     fileprivate let headerMainView = FFHeaderStartMainView(
-        firtsTitle: "Esqueceu,\n",
-        secondTitle: "sua senha?",
-        descriptionText: "Por motivos de segurança,\npara recurá-la, vá até a central\nda distribuidora Fastfeet."
+        firtsTitle: FFForgotPasswordStrings.forgotPasswordHeaderfirtsTitle.localized(),
+        secondTitle: FFForgotPasswordStrings.forgotPasswordHeadersecondTitle.localized(),
+        descriptionText: FFForgotPasswordStrings.forgotPasswordHeaderdescriptionText.localized()
     )
     
     fileprivate let addressFastFeetView: UIView = {
@@ -48,7 +48,7 @@ class FFForgotPassword: UIViewController {
     
     fileprivate let titleAddressLabel: UILabel = {
         let label = UILabel()
-        label.text = "ENDEREÇO"
+        label.text = FFForgotPasswordStrings.forgotPasswordAddressTitle.localized()
         label.textColor = .whiteFastFeetColor
         label.font = UIFont.boldSystemFont(ofSize: 11)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -57,7 +57,7 @@ class FFForgotPassword: UIViewController {
     
     fileprivate let addressLabel: UILabel = {
         let label = UILabel()
-        label.text = "Rua Guilherme Gemballa, 260\nJardim América, SC\n89 168-000"
+        label.text = FFForgotPasswordStrings.forgotPasswordAddress.localized()
         label.textColor = .subtitleTextFastFeetColor
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 0

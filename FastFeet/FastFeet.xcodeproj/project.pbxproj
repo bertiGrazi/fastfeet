@@ -18,6 +18,9 @@
 		B161B9F6296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9F5296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift */; };
 		B161BA05296A34C100F6B5EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161BA04296A34C100F6B5EF /* Extensions.swift */; };
 		B1CF28D6297829DF00D0A562 /* FFForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28D5297829DF00D0A562 /* FFForgotPassword.swift */; };
+		B1CF28DB2978491100D0A562 /* FFLoginStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28DA2978491100D0A562 /* FFLoginStrings.swift */; };
+		B1CF28DD2978499600D0A562 /* FeatureKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28DC2978499600D0A562 /* FeatureKind.swift */; };
+		B1CF28DF29784BDF00D0A562 /* FFForgotPasswordStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28DE29784BDF00D0A562 /* FFForgotPasswordStrings.swift */; };
 		B1FC7E122975B6D500017D98 /* FFHeaderStartMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7E112975B6D500017D98 /* FFHeaderStartMainView.swift */; };
 		B1FC7E152975CD4000017D98 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7E142975CD4000017D98 /* Utilities.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,9 @@
 		B161B9F5296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFeetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B161BA04296A34C100F6B5EF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B1CF28D5297829DF00D0A562 /* FFForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFForgotPassword.swift; sourceTree = "<group>"; };
+		B1CF28DA2978491100D0A562 /* FFLoginStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFLoginStrings.swift; sourceTree = "<group>"; };
+		B1CF28DC2978499600D0A562 /* FeatureKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureKind.swift; sourceTree = "<group>"; };
+		B1CF28DE29784BDF00D0A562 /* FFForgotPasswordStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFForgotPasswordStrings.swift; sourceTree = "<group>"; };
 		B1FC7E112975B6D500017D98 /* FFHeaderStartMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFHeaderStartMainView.swift; sourceTree = "<group>"; };
 		B1FC7E142975CD4000017D98 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +113,7 @@
 		B161B9CE296A318200F6B5EF /* FastFeet */ = {
 			isa = PBXGroup;
 			children = (
+				B1CF28D7297838C500D0A562 /* Strings */,
 				B161BA02296A31B300F6B5EF /* Resources */,
 				B161BA03296A31BC00F6B5EF /* Controller */,
 				B161B9E0296A318200F6B5EF /* Info.plist */,
@@ -153,6 +160,24 @@
 				B1CF28D5297829DF00D0A562 /* FFForgotPassword.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B1CF28D7297838C500D0A562 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				B1CF28DC2978499600D0A562 /* FeatureKind.swift */,
+				B1CF28E029784D9B00D0A562 /* Presentations Strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		B1CF28E029784D9B00D0A562 /* Presentations Strings */ = {
+			isa = PBXGroup;
+			children = (
+				B1CF28DA2978491100D0A562 /* FFLoginStrings.swift */,
+				B1CF28DE29784BDF00D0A562 /* FFForgotPasswordStrings.swift */,
+			);
+			path = "Presentations Strings";
 			sourceTree = "<group>";
 		};
 		B1FC7E132975B91300017D98 /* View */ = {
@@ -293,9 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1CF28DB2978491100D0A562 /* FFLoginStrings.swift in Sources */,
 				B161BA05296A34C100F6B5EF /* Extensions.swift in Sources */,
 				B1CF28D6297829DF00D0A562 /* FFForgotPassword.swift in Sources */,
 				B1FC7E122975B6D500017D98 /* FFHeaderStartMainView.swift in Sources */,
+				B1CF28DD2978499600D0A562 /* FeatureKind.swift in Sources */,
+				B1CF28DF29784BDF00D0A562 /* FFForgotPasswordStrings.swift in Sources */,
 				B1FC7E152975CD4000017D98 /* Utilities.swift in Sources */,
 				B161B9D4296A318200F6B5EF /* FFLoginViewController.swift in Sources */,
 				B161B9D0296A318200F6B5EF /* AppDelegate.swift in Sources */,

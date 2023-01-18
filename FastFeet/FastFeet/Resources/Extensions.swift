@@ -27,3 +27,19 @@ extension UIColor {
     static let baseTextFastFeetColor = UIColor.rgb(red: 111, green: 108, blue: 128)
     static let complementTextFastFeetColor = UIColor.rgb(red: 190, green: 188, blue: 204)
 }
+
+extension String {
+    func localized(_ feature: FeatureKind = .loginPresentation) -> String{
+        
+        var fileName = String()
+        
+        switch feature {
+        case .loginPresentation:
+            fileName = "FFLoginStrings"
+        case .forgotPasswordPresentation:
+            fileName = "FFForgotPasswordStrings"
+        }
+        
+        return NSLocalizedString(self, tableName: fileName, bundle: Bundle.main, value: String(), comment: String())
+    }
+}
