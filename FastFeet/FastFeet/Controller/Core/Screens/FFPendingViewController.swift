@@ -9,6 +9,7 @@ import UIKit
 
 class FFPendingViewController: UIViewController {
     //MARK: - Variable
+    let viewModel: FFPackagesViewModel = FFPackagesViewModel()
     
     //MARK: - UI
     
@@ -43,6 +44,8 @@ class FFPendingViewController: UIViewController {
         viewContainerBody.addSubview(tableView)
         
         tableView.dataSource = self
+        
+        viewModel.fetch(.alamofireRequest)
         
         setupLayoutConstrains()
     }

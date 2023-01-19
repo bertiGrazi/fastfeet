@@ -1,0 +1,6 @@
+framework module Pods_FastFeetTests {
+  umbrella header "Pods-FastFeetTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
