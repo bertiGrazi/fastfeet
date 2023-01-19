@@ -6,8 +6,8 @@
 //
 
 import Foundation
+import Alamofire
 
 enum FFServiceError: Swift.Error {
-    case fileNotFound(name: String)
-    case fileDecodingFailed(name: String, Swift.Error)
+    case errorRequest(AFError)
 }

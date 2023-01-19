@@ -18,11 +18,12 @@
 		B161B9F4296A318200F6B5EF /* FastFeetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9F3296A318200F6B5EF /* FastFeetUITests.swift */; };
 		B161B9F6296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9F5296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift */; };
 		B161BA05296A34C100F6B5EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161BA04296A34C100F6B5EF /* Extensions.swift */; };
-		B186E2252979B87E000B05A7 /* FFPackageResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B186E2242979B87E000B05A7 /* FFPackageResults.swift */; };
+		B186E2252979B87E000B05A7 /* FFPackageDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B186E2242979B87E000B05A7 /* FFPackageDetails.swift */; };
 		B186E2272979B929000B05A7 /* FFPackageStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B186E2262979B929000B05A7 /* FFPackageStatus.swift */; };
 		B191175C2979BB210006D0CA /* FFGenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B191175B2979BB210006D0CA /* FFGenericService.swift */; };
 		B191175E2979BB660006D0CA /* FFServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B191175D2979BB660006D0CA /* FFServiceError.swift */; };
 		B19117602979BBE00006D0CA /* FFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B191175F2979BBE00006D0CA /* FFService.swift */; };
+		B19117632979C1440006D0CA /* FFPackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19117622979C1440006D0CA /* FFPackagesViewModel.swift */; };
 		B1CF28D6297829DF00D0A562 /* FFForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28D5297829DF00D0A562 /* FFForgotPassword.swift */; };
 		B1CF28DB2978491100D0A562 /* FFLoginStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28DA2978491100D0A562 /* FFLoginStrings.swift */; };
 		B1CF28DD2978499600D0A562 /* FeatureKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28DC2978499600D0A562 /* FeatureKind.swift */; };
@@ -75,11 +76,12 @@
 		B161B9F3296A318200F6B5EF /* FastFeetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFeetUITests.swift; sourceTree = "<group>"; };
 		B161B9F5296A318200F6B5EF /* FastFeetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFeetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B161BA04296A34C100F6B5EF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		B186E2242979B87E000B05A7 /* FFPackageResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackageResults.swift; sourceTree = "<group>"; };
+		B186E2242979B87E000B05A7 /* FFPackageDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackageDetails.swift; sourceTree = "<group>"; };
 		B186E2262979B929000B05A7 /* FFPackageStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackageStatus.swift; sourceTree = "<group>"; };
 		B191175B2979BB210006D0CA /* FFGenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFGenericService.swift; sourceTree = "<group>"; };
 		B191175D2979BB660006D0CA /* FFServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFServiceError.swift; sourceTree = "<group>"; };
 		B191175F2979BBE00006D0CA /* FFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFService.swift; sourceTree = "<group>"; };
+		B19117622979C1440006D0CA /* FFPackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackagesViewModel.swift; sourceTree = "<group>"; };
 		B1CF28D5297829DF00D0A562 /* FFForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFForgotPassword.swift; sourceTree = "<group>"; };
 		B1CF28DA2978491100D0A562 /* FFLoginStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFLoginStrings.swift; sourceTree = "<group>"; };
 		B1CF28DC2978499600D0A562 /* FeatureKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureKind.swift; sourceTree = "<group>"; };
@@ -135,7 +137,6 @@
 				2D08766E1EA897B5003BEF67 /* Pods-FastFeetTests.debug.xcconfig */,
 				C533F2AF64305B4EF2BB3004 /* Pods-FastFeetTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -164,6 +165,7 @@
 		B161B9CE296A318200F6B5EF /* FastFeet */ = {
 			isa = PBXGroup;
 			children = (
+				B19117612979C0800006D0CA /* View Model */,
 				B191175A2979BABF0006D0CA /* Service */,
 				B186E2232979B857000B05A7 /* Models */,
 				B1CF28D7297838C500D0A562 /* Strings */,
@@ -218,7 +220,7 @@
 		B186E2232979B857000B05A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B186E2242979B87E000B05A7 /* FFPackageResults.swift */,
+				B186E2242979B87E000B05A7 /* FFPackageDetails.swift */,
 				B186E2262979B929000B05A7 /* FFPackageStatus.swift */,
 			);
 			path = Models;
@@ -232,6 +234,14 @@
 				B191175F2979BBE00006D0CA /* FFService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B19117612979C0800006D0CA /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				B19117622979C1440006D0CA /* FFPackagesViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		B1CF28D7297838C500D0A562 /* Strings */ = {
@@ -538,10 +548,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1CF28ED2978730400D0A562 /* FFHeaderMainTabView.swift in Sources */,
+				B19117632979C1440006D0CA /* FFPackagesViewModel.swift in Sources */,
 				B19117602979BBE00006D0CA /* FFService.swift in Sources */,
 				B1CF28DB2978491100D0A562 /* FFLoginStrings.swift in Sources */,
 				B161BA05296A34C100F6B5EF /* Extensions.swift in Sources */,
-				B186E2252979B87E000B05A7 /* FFPackageResults.swift in Sources */,
+				B186E2252979B87E000B05A7 /* FFPackageDetails.swift in Sources */,
 				B186E2272979B929000B05A7 /* FFPackageStatus.swift in Sources */,
 				B1CF28E429785C8500D0A562 /* FFMainTabViewController.swift in Sources */,
 				B1CF28D6297829DF00D0A562 /* FFForgotPassword.swift in Sources */,

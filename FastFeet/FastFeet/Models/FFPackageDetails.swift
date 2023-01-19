@@ -8,6 +8,10 @@
 import Foundation
 
 struct FFPackageResults: Codable {
+    let results: [FFPackageDetails]
+}
+
+struct FFPackageDetails: Codable {
     let id: Int
     let name: String
     let status: FFPackageStatus
