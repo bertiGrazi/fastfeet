@@ -14,6 +14,8 @@ enum TypeFetch {
 final class FFPackagesViewModel {
     private let service: FFService = FFService()
     
+    private var data: [FFPackageResults] = []
+    
     public func fetch(_ typeFetch: TypeFetch) {
         switch typeFetch {
         case .alamofireRequest:
@@ -21,5 +23,13 @@ final class FFPackagesViewModel {
                 print(result)
             }
         }
+    }
+    
+    public var numberOfSections: Int {
+        return self.data.count
+    }
+    
+    public func packageIdCell(indexPath: IndexPath) -> String {
+        return "\(self.data[indexPath.row].results[indexPath.row].id)" ?? ""
     }
 }

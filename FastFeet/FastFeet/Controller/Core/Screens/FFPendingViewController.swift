@@ -28,7 +28,7 @@ class FFPendingViewController: UIViewController {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(FFPackagesTableViewCell.self, forCellReuseIdentifier: FFPackagesTableViewCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -48,6 +48,11 @@ class FFPendingViewController: UIViewController {
         viewModel.fetch(.alamofireRequest)
         
         setupLayoutConstrains()
+        setupTableView()
+    }
+    
+    fileprivate func setupTableView() {
+        tableView.dataSource = self
     }
     
     fileprivate func setupLayoutConstrains() {
@@ -66,21 +71,24 @@ class FFPendingViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: viewContainerBody.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: viewContainerBody.trailingAnchor, constant: 0),
             tableView.bottomAnchor.constraint(equalTo: viewContainerBody.bottomAnchor, constant: 0),
-            tableView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height)
+            tableView.heightAnchor.constraint(equalToConstant: 1000)
         ])
     }
 }
 
 extension FFPendingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           return 100
+        return viewModel.numberOfSections
        }
        
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-           cell.textLabel?.text = "Hello"
-           cell.textLabel?.textColor = .black
-           cell.backgroundColor = .backgroundLightColor
-           return cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FFPackagesTableViewCell.identifier, for: indexPath) as? FFPackagesTableViewCell else { return UITableViewCell() }
+        cell.setupCell(with: self.viewModel.packageIdCell(indexPath: indexPath))
+        return cell
        }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 }
+

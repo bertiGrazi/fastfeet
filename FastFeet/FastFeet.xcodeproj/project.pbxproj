@@ -24,6 +24,8 @@
 		B191175E2979BB660006D0CA /* FFServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B191175D2979BB660006D0CA /* FFServiceError.swift */; };
 		B19117602979BBE00006D0CA /* FFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B191175F2979BBE00006D0CA /* FFService.swift */; };
 		B19117632979C1440006D0CA /* FFPackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19117622979C1440006D0CA /* FFPackagesViewModel.swift */; };
+		B1911766297B08F70006D0CA /* FFPackagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1911765297B08F70006D0CA /* FFPackagesTableViewCell.swift */; };
+		B1911768297B13A80006D0CA /* FFPackagesTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1911767297B13A80006D0CA /* FFPackagesTableViewCellViewModel.swift */; };
 		B1CF28D6297829DF00D0A562 /* FFForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28D5297829DF00D0A562 /* FFForgotPassword.swift */; };
 		B1CF28DB2978491100D0A562 /* FFLoginStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28DA2978491100D0A562 /* FFLoginStrings.swift */; };
 		B1CF28DD2978499600D0A562 /* FeatureKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF28DC2978499600D0A562 /* FeatureKind.swift */; };
@@ -82,6 +84,8 @@
 		B191175D2979BB660006D0CA /* FFServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFServiceError.swift; sourceTree = "<group>"; };
 		B191175F2979BBE00006D0CA /* FFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFService.swift; sourceTree = "<group>"; };
 		B19117622979C1440006D0CA /* FFPackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackagesViewModel.swift; sourceTree = "<group>"; };
+		B1911765297B08F70006D0CA /* FFPackagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackagesTableViewCell.swift; sourceTree = "<group>"; };
+		B1911767297B13A80006D0CA /* FFPackagesTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackagesTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		B1CF28D5297829DF00D0A562 /* FFForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFForgotPassword.swift; sourceTree = "<group>"; };
 		B1CF28DA2978491100D0A562 /* FFLoginStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFLoginStrings.swift; sourceTree = "<group>"; };
 		B1CF28DC2978499600D0A562 /* FeatureKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureKind.swift; sourceTree = "<group>"; };
@@ -240,8 +244,17 @@
 			isa = PBXGroup;
 			children = (
 				B19117622979C1440006D0CA /* FFPackagesViewModel.swift */,
+				B1911767297B13A80006D0CA /* FFPackagesTableViewCellViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		B1911764297B08D60006D0CA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B1911765297B08F70006D0CA /* FFPackagesTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B1CF28D7297838C500D0A562 /* Strings */ = {
@@ -275,6 +288,7 @@
 		B1CF28E229785C6300D0A562 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B1911764297B08D60006D0CA /* Cell */,
 				B1CF28E329785C8500D0A562 /* FFMainTabViewController.swift */,
 				B1CF28E729785D9600D0A562 /* Screens */,
 			);
@@ -559,9 +573,11 @@
 				B1FC7E122975B6D500017D98 /* FFHeaderStartMainView.swift in Sources */,
 				B1CF28DD2978499600D0A562 /* FeatureKind.swift in Sources */,
 				B1CF28EB297860BC00D0A562 /* FFMainTabStrings.swift in Sources */,
+				B1911768297B13A80006D0CA /* FFPackagesTableViewCellViewModel.swift in Sources */,
 				B1CF28DF29784BDF00D0A562 /* FFForgotPasswordStrings.swift in Sources */,
 				B1CF28E629785D6200D0A562 /* FFPendingViewController.swift in Sources */,
 				B1FC7E152975CD4000017D98 /* Utilities.swift in Sources */,
+				B1911766297B08F70006D0CA /* FFPackagesTableViewCell.swift in Sources */,
 				B161B9D4296A318200F6B5EF /* FFLoginViewController.swift in Sources */,
 				B191175C2979BB210006D0CA /* FFGenericService.swift in Sources */,
 				B161B9D0296A318200F6B5EF /* AppDelegate.swift in Sources */,
