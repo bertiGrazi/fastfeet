@@ -16,6 +16,7 @@ class FFPendingViewController: UIViewController {
     fileprivate let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.backgroundColor = .backgroundColor
+        scrollView.isScrollEnabled = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
