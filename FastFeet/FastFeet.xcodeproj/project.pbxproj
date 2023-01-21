@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		67843FCE9AFBDA901289F29A /* Pods_FastFeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A570BDAF5DCAC639C5D5C1 /* Pods_FastFeet.framework */; };
+		B155BD76297C726900B2282D /* FFPackageBusinessModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B155BD75297C726900B2282D /* FFPackageBusinessModelProtocol.swift */; };
+		B155BD78297C727700B2282D /* FFPackagesBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B155BD77297C727700B2282D /* FFPackagesBusinessModel.swift */; };
+		B155BD7A297C72D000B2282D /* FFPackageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B155BD79297C72D000B2282D /* FFPackageDataSource.swift */; };
+		B155BD7D297C760300B2282D /* FFPackagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B155BD7C297C760300B2282D /* FFPackagesTableViewCell.swift */; };
 		B161B9D0296A318200F6B5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9CF296A318200F6B5EF /* AppDelegate.swift */; };
 		B161B9D2296A318200F6B5EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9D1296A318200F6B5EF /* SceneDelegate.swift */; };
 		B161B9D4296A318200F6B5EF /* FFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B161B9D3296A318200F6B5EF /* FFLoginViewController.swift */; };
@@ -62,6 +66,10 @@
 		2D08766E1EA897B5003BEF67 /* Pods-FastFeetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastFeetTests.debug.xcconfig"; path = "Target Support Files/Pods-FastFeetTests/Pods-FastFeetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4005DD584EDDF24E02E2B71E /* Pods-FastFeet-FastFeetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastFeet-FastFeetUITests.debug.xcconfig"; path = "Target Support Files/Pods-FastFeet-FastFeetUITests/Pods-FastFeet-FastFeetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		76839803B565232DB51D5E42 /* Pods-FastFeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastFeet.debug.xcconfig"; path = "Target Support Files/Pods-FastFeet/Pods-FastFeet.debug.xcconfig"; sourceTree = "<group>"; };
+		B155BD75297C726900B2282D /* FFPackageBusinessModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackageBusinessModelProtocol.swift; sourceTree = "<group>"; };
+		B155BD77297C727700B2282D /* FFPackagesBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackagesBusinessModel.swift; sourceTree = "<group>"; };
+		B155BD79297C72D000B2282D /* FFPackageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackageDataSource.swift; sourceTree = "<group>"; };
+		B155BD7C297C760300B2282D /* FFPackagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPackagesTableViewCell.swift; sourceTree = "<group>"; };
 		B161B9CC296A318200F6B5EF /* FastFeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastFeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B161B9CF296A318200F6B5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B161B9D1296A318200F6B5EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +148,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B155BD74297C725800B2282D /* BusinessModel */ = {
+			isa = PBXGroup;
+			children = (
+				B155BD75297C726900B2282D /* FFPackageBusinessModelProtocol.swift */,
+				B155BD77297C727700B2282D /* FFPackagesBusinessModel.swift */,
+				B155BD7B297C72DE00B2282D /* Data Source */,
+			);
+			path = BusinessModel;
+			sourceTree = "<group>";
+		};
+		B155BD7B297C72DE00B2282D /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				B155BD79297C72D000B2282D /* FFPackageDataSource.swift */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
 		B161B9C3296A318200F6B5EF = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +191,7 @@
 		B161B9CE296A318200F6B5EF /* FastFeet */ = {
 			isa = PBXGroup;
 			children = (
+				B155BD74297C725800B2282D /* BusinessModel */,
 				B19117612979C0800006D0CA /* View Model */,
 				B191175A2979BABF0006D0CA /* Service */,
 				B186E2232979B857000B05A7 /* Models */,
@@ -286,6 +313,7 @@
 			children = (
 				B1CF28E529785D6200D0A562 /* FFPendingViewController.swift */,
 				B1CF28E829785DC700D0A562 /* FFDeliveredViewController.swift */,
+				B155BD7C297C760300B2282D /* FFPackagesTableViewCell.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -555,6 +583,8 @@
 				B186E2252979B87E000B05A7 /* FFPackageDetails.swift in Sources */,
 				B186E2272979B929000B05A7 /* FFPackageStatus.swift in Sources */,
 				B1CF28E429785C8500D0A562 /* FFMainTabViewController.swift in Sources */,
+				B155BD7D297C760300B2282D /* FFPackagesTableViewCell.swift in Sources */,
+				B155BD78297C727700B2282D /* FFPackagesBusinessModel.swift in Sources */,
 				B1CF28D6297829DF00D0A562 /* FFForgotPassword.swift in Sources */,
 				B1FC7E122975B6D500017D98 /* FFHeaderStartMainView.swift in Sources */,
 				B1CF28DD2978499600D0A562 /* FeatureKind.swift in Sources */,
@@ -565,8 +595,10 @@
 				B161B9D4296A318200F6B5EF /* FFLoginViewController.swift in Sources */,
 				B191175C2979BB210006D0CA /* FFGenericService.swift in Sources */,
 				B161B9D0296A318200F6B5EF /* AppDelegate.swift in Sources */,
+				B155BD76297C726900B2282D /* FFPackageBusinessModelProtocol.swift in Sources */,
 				B1CF28E929785DC700D0A562 /* FFDeliveredViewController.swift in Sources */,
 				B161B9D2296A318200F6B5EF /* SceneDelegate.swift in Sources */,
+				B155BD7A297C72D000B2282D /* FFPackageDataSource.swift in Sources */,
 				B191175E2979BB660006D0CA /* FFServiceError.swift in Sources */,
 				B161B9DA296A318200F6B5EF /* FastFeet.xcdatamodeld in Sources */,
 			);

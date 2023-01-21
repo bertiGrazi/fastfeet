@@ -65,6 +65,6 @@ class FFMainTabViewController: UITabBarController {
 
         tabBar.standardAppearance = tabBarAppearance
         
-        UITabBar.appearance().backgroundColor = .whiteFastFeetColor
+        UITabBar.appearance().backgroundColor = .white
     }
 }

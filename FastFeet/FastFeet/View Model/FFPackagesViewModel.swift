@@ -14,6 +14,8 @@ enum TypeFetch {
 final class FFPackagesViewModel {
     private let service: FFService = FFService()
     
+    private let bussinessModel: FFPackageBusinessModelProtocol = FFPackagesBusinessModel()
+    
     public func fetch(_ typeFetch: TypeFetch) {
         switch typeFetch {
         case .alamofireRequest:
@@ -21,5 +23,9 @@ final class FFPackagesViewModel {
                 print(result)
             }
         }
+    }
+    
+    public func fetchMockListPackages() -> [FFPackageDataSource]{
+        return bussinessModel.fetchPackages()
     }
 }

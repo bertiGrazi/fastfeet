@@ -29,7 +29,10 @@ class FFPendingViewController: UIViewController {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.backgroundColor = .red
+        tableView.register(FFPackagesTableViewCell.self, forCellReuseIdentifier: FFPackagesTableViewCell.identifier)
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .backgroundLightColor
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -40,9 +43,10 @@ class FFPendingViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .backgroundColor
         
-        view.addSubview(scrollView)
-        scrollView.addSubview(viewContainerBody)
-        viewContainerBody.addSubview(tableView)
+        view.addSubview(tableView)
+//        scrollView.addSubview(viewContainerBody)
+//        viewContainerBody.addSubview(tableView)
+
         
         tableView.dataSource = self
         
@@ -53,35 +57,27 @@ class FFPendingViewController: UIViewController {
     
     fileprivate func setupLayoutConstrains() {
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
-            
-            viewContainerBody.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0),
-            viewContainerBody.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            viewContainerBody.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            viewContainerBody.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 0),
-            
-            tableView.topAnchor.constraint(equalTo: viewContainerBody.topAnchor, constant: 0),
-            tableView.leadingAnchor.constraint(equalTo: viewContainerBody.leadingAnchor, constant: 0),
-            tableView.trailingAnchor.constraint(equalTo: viewContainerBody.trailingAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: viewContainerBody.bottomAnchor, constant: 0),
-            tableView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height)
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
         ])
     }
 }
 
 extension FFPendingViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           return 100
-       }
-       
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-           cell.textLabel?.text = "Hello"
-           cell.textLabel?.textColor = .black
-           cell.backgroundColor = .backgroundLightColor
-           return cell
-       }
+        return viewModel.fetchMockListPackages().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FFPackagesTableViewCell.identifier, for: indexPath) as? FFPackagesTableViewCell else { return UITableViewCell()
+        }
+        cell.configCell(with: viewModel.fetchMockListPackages()[indexPath.row])
+        return cell
+    }
 }
